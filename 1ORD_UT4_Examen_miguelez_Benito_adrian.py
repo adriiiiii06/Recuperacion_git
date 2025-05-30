@@ -1,34 +1,36 @@
 # Clases para representar dispositivos
 from abc import ABC, abstractmethod
 
-class Dispositivo():
-    def __init__(self):
-        pass
-
-    @abstractmethod    
-    def mostrar_info():
-        pass
-
-class portatil:
+class Dispositivo(ABC):
     def __init__(self, marca, procesador, ram):
         self.marca = marca  # marca
         self.procesador = procesador  # procesador
         self.ram = ram
 
-    def mostrar_portatil(self):
+    @abstractmethod    
+    def mostrar_info():
+        pass
+
+class portatil():
+    def __init__(self, marca, procesador, ram):
+        self.marca = marca  # marca
+        self.procesador = procesador  # procesador
+        self.ram = ram
+
+    def mostrar_info(self):
         print("Dispositivo: Portátil")
         print(f"Marca: {self.marca}")
         print(f"Procesador: {self.procesador}")
         print(f"RAM: {self.ram} GB")
 
 
-class movil:
+class movil():
     def __init__(self, marca, procesador, ram):
         self.marca = marca  # marca
         self.procesador = procesador  # procesador
         self.ram = ram
 
-    def mostrar_movil(self):
+    def mostrar_info(self):
         print("Dispositivo: Móvil")
         print(f"Marca: {self.marca}")
         print(f"Procesador: {self.procesador}")
@@ -41,10 +43,10 @@ def main():
     dispositivo_2 = movil("Samsung", "Snapdragon", 8)
 
     print("== Información de dispositivos ==")
-    dispositivo_1.mostrar_portatil()
+    dispositivo_1.mostrar_info()
     print("------------------------")
-    dispositivo_2.mostrar_movil()
-+
+    dispositivo_2.mostrar_info()
+
 
 if __name__ == "__main__":
     main()
