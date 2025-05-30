@@ -28,16 +28,22 @@ class movil(Dispositivo):
         print(f"Procesador: {self.procesador}")
         print(f"RAM: {self.ram} GB")
 
+class creacion_dispositivos:
+    def utilidades():
+        dispositivo_1 = portatil("Dell", "i7", 16)
+        dispositivo_2 = movil("Samsung", "Snapdragon", 8)
+        return dispositivo_1,dispositivo_2
 
 # Función principal
 def main():
-    dispositivo_1 = portatil("Dell", "i7", 16)
-    dispositivo_2 = movil("Samsung", "Snapdragon", 8)
+    dispositivo_1, dispositivo_2 = creacion_dispositivos.utilidades()
 
     print("== Información de dispositivos ==")
     dispositivo_1.mostrar_info()
     print("------------------------")
     dispositivo_2.mostrar_info()
+
+
 
 
 if __name__ == "__main__":
