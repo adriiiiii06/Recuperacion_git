@@ -1,41 +1,41 @@
 # Clases para representar dispositivos
 
 class portatil:
-    def __init__(self, m, p, ram):
-        self.m = m  # marca
-        self.p = p  # procesador
+    def __init__(self, marca, procesador, ram):
+        self.marca = marca  # marca
+        self.procesador = procesador  # procesador
         self.ram = ram
 
-    def mostrar(self):
+    def mostrar_portatil(self):
         print("Dispositivo: Portátil")
-        print(f"Marca: {self.m}")
-        print(f"Procesador: {self.p}")
+        print(f"Marca: {self.marca}")
+        print(f"Procesador: {self.procesador}")
         print(f"RAM: {self.ram} GB")
 
 
 class movil:
-    def __init__(self, m, p, ram):
-        self.m = m  # marca
-        self.p = p  # procesador
+    def __init__(self, marca, procesador, ram):
+        self.marca = marca  # marca
+        self.procesador = procesador  # procesador
         self.ram = ram
 
-    def mostrar(self):
+    def mostrar_movil(self):
         print("Dispositivo: Móvil")
-        print(f"Marca: {self.m}")
-        print(f"Procesador: {self.p}")
+        print(f"Marca: {self.marca}")
+        print(f"Procesador: {self.procesador}")
         print(f"RAM: {self.ram} GB")
 
 
 # Función principal
 def main():
-    d1 = portatil("Dell", "i7", 16)
-    d2 = movil("Samsung", "Snapdragon", 8)
+    dispositivo_1 = portatil("Dell", "i7", 16)
+    dispositivo_2 = movil("Samsung", "Snapdragon", 8)
 
     print("== Información de dispositivos ==")
-    d1.mostrar()
+    dispositivo_1.mostrar_portatil()
     print("------------------------")
-    d2.mostrar()
-
+    dispositivo_2.mostrar_movil()
++
 
 if __name__ == "__main__":
     main()
