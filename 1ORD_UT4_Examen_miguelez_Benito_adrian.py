@@ -1,4 +1,13 @@
 # Clases para representar dispositivos
+from abc import ABC, abstractmethod
+
+class Dispositivo():
+    def __init__(self):
+        pass
+
+    @abstractmethod    
+    def mostrar_info():
+        pass
 
 class portatil:
     def __init__(self, marca, procesador, ram):
