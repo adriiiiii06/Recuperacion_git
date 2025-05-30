@@ -11,11 +11,7 @@ class Dispositivo(ABC):
     def mostrar_info():
         pass
 
-class portatil():
-    def __init__(self, marca, procesador, ram):
-        self.marca = marca  # marca
-        self.procesador = procesador  # procesador
-        self.ram = ram
+class portatil(Dispositivo):
 
     def mostrar_info(self):
         print("Dispositivo: Portátil")
@@ -24,11 +20,7 @@ class portatil():
         print(f"RAM: {self.ram} GB")
 
 
-class movil():
-    def __init__(self, marca, procesador, ram):
-        self.marca = marca  # marca
-        self.procesador = procesador  # procesador
-        self.ram = ram
+class movil(Dispositivo):
 
     def mostrar_info(self):
         print("Dispositivo: Móvil")
